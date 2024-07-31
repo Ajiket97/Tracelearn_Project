@@ -28,7 +28,6 @@ public class DataProviderDemo {
 				System.out.println(data[i - 1][j]);
 			}
 		}
-		workBook.close();
 		return data;
 
 	}

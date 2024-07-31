@@ -9,9 +9,10 @@ public class SelectSize {
 	public static void selectSize() throws InterruptedException {
 		ChromeDriver d = new ChromeDriver();
 		d.manage().window().maximize();
-		d.get("https://www.myntra.com/shoes?rawQuery=shoes");
-		d.findElement(By.xpath("//img[@alt=\"Campus Men Mesh Running Shoes\"]")).click();
+		d.get("https://www.myntra.com/shoes?rawQuery=shoes\\");
 		Thread.sleep(6000);
+		d.findElement(By.xpath("//ul/li[@id=\"29021338\"]")).click();
+		//Thread.sleep(6000);
 		String originalwindo = d.getWindowHandle();
 		Set<String> allWindow = d.getWindowHandles();
 		for (String string : allWindow) {

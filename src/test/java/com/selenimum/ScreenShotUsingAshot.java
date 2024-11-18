@@ -9,6 +9,7 @@ import java.io.IOException;
 import javax.imageio.ImageIO;
 
 import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -52,6 +53,7 @@ public class ScreenShotUsingAshot {
 	public static void usingSelenium() throws IOException {
          driver = new FirefoxDriver();
         driver.get("https://www.myntra.com/");
+        //driver.findElement(By.xpath(null))
         driver.manage().window().maximize();
         //File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE); if we use Webdriver
         File file=((RemoteWebDriver) driver).getScreenshotAs(OutputType.FILE);
